@@ -42,8 +42,8 @@ export WINEDEBUG="-all"
 scriptdir="$(dirname "$(realpath "$0")")"
 cd "$scriptdir"
 
-cp -vf syswow64/* "$WINEPREFIX/drive_c/windows/syswow64"
-cp -vf system32/* "$WINEPREFIX/drive_c/windows/system32"
+cp -vf --remove-destination syswow64/* "$WINEPREFIX/drive_c/windows/syswow64"
+cp -vf --remove-destination system32/* "$WINEPREFIX/drive_c/windows/system32"
 
 override_dll "colorcnv"
 override_dll "mf"
