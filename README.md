@@ -1,49 +1,21 @@
-# May 2020 Notice
-
+# October 2021 Notice
 For many games this script is not needed anymore, and may soon not be needed at all.
 
-This is largely thanks to work Guy1524 has done in officially implementing Media Foundation support into Wine. I would reccommend trying games with latest Proton-GE first, and only using this as a backup.
+I would reccommend trying games with latest Proton Experimental, Proton-GE, or Proton-tkg first, and only using this as a backup. mf-install may not work with newer Proton versions that implement Valve's ongoing attempt to remotely transcode videos to free formats on their servers.
 
 # mf-install
-Media Foundation workaround for Wine
-
 Easily add Media Foundation support to a Wine prefix. Just set WINEPREFIX to a valid Wine prefix and run.
 
 Example usage:
 
-`WINEPREFIX="/dev/brain/wine prefixes can be anywhere/folder" ./mf-install.sh`
+`WINEPREFIX="/home/user/wine prefixes can be anywhere/folder" ./mf-install.sh`
 
 Steam stores Proton Wine prefixes as `<STEAM FOLDER>/steamapps/compatdata/<GAME ID>/pfx`
 
-Optionally you can use Proton's Wine instead of your system's Wine. See the script for how.
+# Optional: Using Proton instead of system's Wine
+Set the PROTON env variable a Proton folder, and pass -proton to the script. Example:
 
-For CPUs with more than 8 physical cores see this known issue: https://github.com/z0z0z/mf-install/issues/44
+`WINEPREFIX="/steam folder/steamapps/compatdata/111111/pfx" PROTON="/steam folder/steamapps/common/Proton 5.0" ./mf-install.sh -proton`
 
-### Some known working games:
-- American Fugitive
-- Blasphemous
-- BlazBlue: Central Fiction
-- Breathedge
-- Call of Cthulu 2018
-- Car Mechanic Simulator 2018
-- Children of Morta
-- Danganronpa V3: Killing Harmony
-- Dauntless
-- Devotion
-- FINAL FANTASY TYPE-0 HD
-- GRIS
-- Monster Hunter World
-- Obduction
-- PC Building Simulator
-- Postal 4
-- Stranded Sails - Explorers of the Cursed Islands
-- Team Sonic Racing
-- The Outer Worlds
-- Yaga
-
-And many more
-
-### Alternative method:
-See the repository below for an installcab based Media Foundation workaround that works with some games that this doesn't, and vice versa:
-
-https://github.com/z0z0z/mf-installcab
+# Known issues
+For CPUs with more than 8 physical cores, see: https://github.com/z0z0z/mf-install/issues/44
