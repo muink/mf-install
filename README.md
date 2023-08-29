@@ -19,3 +19,6 @@ Set the PROTON env variable a Proton folder, and pass -proton to the script. Exa
 
 # Known issues
 For CPUs with more than 8 physical cores, see: https://github.com/z0z0z/mf-install/issues/44
+
+# August 2023 Notice
+Github will soon be requiring 2FA, and since I am not complying and giving them my phone number, this account will be de-facto deleted. This repo will remain in this state permanently or until it's removed.
